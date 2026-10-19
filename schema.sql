@@ -144,6 +144,9 @@ CREATE TABLE Clinical_Notes (
     patient_symptoms TEXT,
     initial_clinical_findings TEXT,
     planned_diagnostic_examinations TEXT,
+    note_type VARCHAR(50),
+    note_datetime TIMESTAMP,
+    note_contents TEXT,
 
     FOREIGN KEY (admission_id)
         REFERENCES Admissions(admission_id),
