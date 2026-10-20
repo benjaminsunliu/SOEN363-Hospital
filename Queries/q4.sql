@@ -1,6 +1,6 @@
 -- Join Patients and Admissions to match patients with their admissions
 -- Use EXISTS to require both a surgical procedure and a completed radiology examination linked through Diagnostic_Orders for the same admission
-select p.patient_id, p.name, a.admission_id
+SELECT p.patient_id, p.name, a.admission_id
 FROM Patients p
 JOIN Admissions a ON a.patient_id = p.patient_id
 WHERE EXISTS (
